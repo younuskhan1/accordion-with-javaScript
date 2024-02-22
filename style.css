@@ -3,6 +3,7 @@
     margin: 0px;
     padding: 0px;
     text-decoration: none;
+    list-style: none;
     box-sizing: border-box;
     font-family: "Roboto Condensed", sans-serif;
 }
@@ -52,10 +53,11 @@ h1 {
 .accordion-item-body{
     max-height: 0px;
     overflow: hidden;
-    transition: max-height 0.2s ease-out;
+    transition: max-height 0.5s ease-out;
 }
 .accordion-item-body-content{
     padding: 1rem;
+    text-align: justify;
     line-height: 1.5rem;
     border-top: 1px solid;
     border-image: linear-gradient(to right, transparent, #34495e, transparent ), 1;
@@ -63,3 +65,8 @@ h1 {
 /* .accordion-item-header.active + .accordion-item-body{
     display: block;
 } */
+@media(max-width:767px){
+    html{
+        font-size: 14px;
+    }
+}
