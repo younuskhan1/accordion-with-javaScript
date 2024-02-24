@@ -1,17 +1,33 @@
+//  First step:
+// Event handlers are added to each question's element.
 
 const accordionItemsHeaders = document.querySelectorAll(".accordion-item-header");
 console.log(accordionItemsHeaders);
 accordionItemsHeaders.forEach((accordionItemsHeader)=>{
-    accordionItemsHeader.addEventListener("click", event =>{
+    accordionItemsHeader.addEventListener("click", () =>{
+    console.log(accordionItemsHeader);
+
+    // Third step:
+    // immediate below four lines of code is added at last so that previous clicked
+    // question's answer can be automatically closed after the clicking on the latest 
+    // clicked question.
+
 
     const currentlyActiveAccordionItemsHeader = document.querySelector(".accordion-item-header.active");
+
+    // currentlyActiveAccordionItemsHeader is the latest clicked event handler/question and accordionItemsHeader 
+    // is the previous clicked event handler/question so these two cannot be same at a time. 
 
     if(currentlyActiveAccordionItemsHeader && currentlyActiveAccordionItemsHeader!==accordionItemsHeader){
         currentlyActiveAccordionItemsHeader.classList.toggle("active");
         currentlyActiveAccordionItemsHeader.nextElementSibling.style.maxHeight=0;
     }
 
-    console.log(accordionItemsHeader);
+    
+    // Second step:
+    // active class is added to clicked accordionItemsHeader dynamically at the time of 
+    // clicking on the event.
+
 
     accordionItemsHeader.classList.toggle("active");
     const accordionItemBody = accordionItemsHeader.nextElementSibling;
