@@ -62,9 +62,14 @@ h1 {
     border-top: 1px solid;
     border-image: linear-gradient(to right, transparent, #34495e, transparent ), 1;
 }
-/* .accordion-item-header.active + .accordion-item-body{
+
+
+/* we could find out accordion-item-header's nextSibling with the following way.
+
+.accordion-item-header.active + .accordion-item-body{
     display: block;
 } */
+
 @media(max-width:767px){
     html{
         font-size: 14px;
